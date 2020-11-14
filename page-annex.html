@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- START: Head-->
+    <head>
+        <meta charset="UTF-8">
+        <title>CRM</title>
+        <link rel="shortcut icon" href="dist/images/favicon.png" />
+        <meta name="viewport" content="width=device-width,initial-scale=1"> 
+
+        <!-- START: Template CSS-->
+        <link rel="stylesheet" href="dist/vendors/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="dist/vendors/simple-line-icons/css/simple-line-icons.css">        
+        <link rel="stylesheet" href="dist/vendors/fontawesome/css/all.min.css">   
+		<link rel="stylesheet" href="dist/vendors/icofont/icofont.min.css"> 
+		<link rel="stylesheet" href="dist/vendors/ionicons/css/ionicons.min.css">
+      	<!-- END Template CSS--> 
+
+        <!-- START: Custom CSS-->
+        <link rel="stylesheet" href="dist/css/main.css">
+		<script>
+			/* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+			function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+			}
+
+			function filterFunction() {
+				var input, filter, ul, li, a, i;
+				input = document.getElementById("myInput");
+				filter = input.value.toUpperCase();
+				div = document.getElementById("myDropdown");
+				a = div.getElementsByTagName("a");
+				for (i = 0; i < a.length; i++) {
+					txtValue = a[i].textContent || a[i].innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						a[i].style.display = "";
+					} else {
+						a[i].style.display = "none";
+					}
+				}
+			}
+		</script>
+        <!-- END: Custom CSS-->
+    </head>
+    <!-- END Head-->
+
+    <!-- START: Body-->
+    <body>
+        <!-- START: Pre Loader-->
+        <div class="se-pre-con">
+            <div class="loader"></div>
+        </div>
+        <!-- END: Pre Loader-->
+
+        <!-- START: Header-->
+        <div id="header-fix" class="fixed-top">
+			<nav class="navbar navbar-expand-lg p-0">
+				<div class="navbar-header h4 mb-0 text-center h-100 collapse-menu-bar">
+					<a href="#" class="sidebarCollapse" id="collapse"><i class="icon-menu"></i></a>
+                </div>
+                <div class="navbar-header  h-100 h4 mb-0 align-self-center logo-bar text-left">  
+					<a href="index.html" class="font-weight-bold ml-1">PMZ Satış</a> 
+                </div>
+				<div class="ml-auto h-100">
+					<ul class="list-unstyled d-flex top-icon h-100">
+						<li>
+							<a href="#" class="nav-link py-0" data-toggle="dropdown" aria-expanded="false">
+								<i class="icon-user"></i>
+                            </a>
+							<div class="dropdown-menu dropdown-menu-right p-0">
+								<a href="" class="dropdown-item text-danger align-self-center d-flex"><span class="icon-logout mr-2 h6  mb-0"></span> Sign Out</a>
+                            </div>
+                        </li>
+					</ul>
+                </div>
+			</nav>
+		</div>
+        <!-- END: Header-->
+        <!-- START: Sidebar Menu-->
+        <div class="sidebar">
+			<ul class="sidebar-menu">
+				<li><a href="index.html"><i class="icofont-law-document mr-1"></i>Müqavilə dövriyyəsi</a>
+					<ul>
+						<li><a href="index.html"><i class="icon-briefcase"></i>CRM</a></li>
+                    </ul>
+			    </li>
+		    </ul>        
+        </div> 
+        <!-- END: Sidebar Menu-->
+        <!-- START: Main Content-->
+        <main>
+			<div class="container-fluid">
+				<!-- START: Topbar Menu-->
+				<div class="row ">
+					<div class="col-12">
+						<div class="theme-background p-2 mt-4 menu-header">
+							<ul class="nav nav-pills flex-column flex-sm-row">
+								<li>
+									<a class="nav-link py-2 px-3 px-lg-4" href="index.html">Müqavilə</a>
+								</li>
+								<li>
+									<a class="nav-link py-2 px-3 px-lg-4 active" href="page-annex.html"> Əlavə</a>
+								</li>
+								<li>
+									<a class="nav-link py-2 px-3 px-lg-4" href="page-contactlist.html"> Kontakt</a>
+								</li>
+								<li>
+									<a class="nav-link py-2 px-3 px-lg-4" href="page-bank.html"> 
+									Bank</a>
+								</li>
+							</ul>
+                        </div>
+					</div>
+					<!-- END: Topbar Menu-->
+					<!-- START:  Table Data-->
+					<div class="col-12">
+						<!-- START: Create new annex-->
+						<div class="row py-3 mt-3">
+							<div class="col-lg-2">
+								<div class="btn-group dropright">
+									<button type="button" class="btn btn-contract rounded"><a href="product-form.html">Yeni əlavə yarat</a></button>
+								</div><!-- /btn-group -->
+							</div>
+							<div class="col-lg-4">
+								<div class="input-group">
+									<input type="text" class="form-control input-search" placeholder="Axtarın..." style="height: 32px !important;"/>
+									<div class="btn-group">
+										<div class="dropdowncustom">
+											<button type="button" class="btn btn-default dropdown-toggle dropbtn" onclick="myFunction()" data-toggle="dropdown"
+													aria-expanded="false"></button>
+
+										</div>
+
+									</div>
+									<div id="myDropdown" class="dropdown-content" style="padding: 5px">
+										<div class="form-group">
+											<label>Filter by</label>
+											<select class="form-control">
+												<option>All Snippets</option>
+												<option>Featured</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="contain">Author</label>
+											<input class="form-control" type="text" />
+										</div>
+										<div class="form-group">
+											<label for="contain">Contains the words</label>
+											<input class="form-control" type="text" />
+										</div>
+										<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="col-md-6 exceldiv" style="width: 200px;float: right">
+<!--							<div class="btn-group mb-2 pr-1">-->
+<!--							</div>-->
+							<button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Excel"><i class="fas text-success fa-file-excel fa-2x"></i></button>
+							<button type="button"  class="btn" data-toggle="tooltip" data-placement="bottom" title="PDF"><i class="fas text-danger fa-file-pdf fa-2x"></i></button>
+							<button type="button"  class="btn" data-toggle="tooltip" data-placement="bottom" title="Print"><i class="icon-printer fa-2x"></i></button>
+
+<!--							<div class="btn-group mb-2 pr-1">-->
+<!--							</div>-->
+<!--							<div class="btn-group mb-2 pr-1">-->
+<!--							</div>-->
+						</div>
+							</div>
+						</div>
+						<!-- END: Create new contract-->
+						<div class="table-responsive bg-white mt-4">
+							<table class="table table-hover table-borderless">
+								<thead>
+									<tr>
+										<th>Şirkət</th>
+										<th>Sorğu Nömrəsi</th>
+										<th>Müqavilə Nömrəsi</th>
+										<th>Əlavə</th>
+                                        <th>Satış meneceri</th>
+                                        <th>Məhsul</th>
+									    <th>Ödəniş şərti</th>
+                                        <th>Məbləğ AZN (ƏDV-siz)</th>
+										<th>Məbləğ AZN (ƏDV daxil)</th>
+                                        <th>Yaradılma tarixi</th>
+                                        <th>Qarşı tərəfin imza tarixi</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Ekol</td>
+										<td>KSPMZ2020-001</td>
+										<td>P2020-001</td>
+										<td>141</td>
+										<td>Emin Velisoy</td>
+										<td>Boru PH 100</td>
+										<td>50% ilkin ödəniş</td>
+										<td>500</td>
+										<td>700</td>
+										<td>01.02.2020</td>
+										<td>01.03.2020</td>
+									</tr>
+									<tr>
+										<td>Ekol</td>
+										<td>KSPMZ2020-001</td>
+										<td>P2020-001</td>
+										<td>141</td>
+										<td>Emin Velisoy</td>
+										<td>Boru PH 100</td>
+										<td>50% ilkin ödəniş</td>
+										<td>500</td>
+										<td>700</td>
+										<td>01.02.2020</td>
+										<td>01.03.2020</td>
+									</tr>
+									<tr>
+										<td>Ekol</td>
+										<td>KSPMZ2020-001</td>
+										<td>P2020-001</td>
+										<td>141</td>
+										<td>Emin Velisoy</td>
+										<td>Boru PH 100</td>
+										<td>50% ilkin ödəniş</td>
+										<td>500</td>
+										<td>700</td>
+										<td>01.02.2020</td>
+										<td>01.03.2020</td>
+									</tr>
+									<tr>
+										<td>Ekol</td>
+										<td>KSPMZ2020-001</td>
+										<td>P2020-001</td>
+										<td>141</td>
+										<td>Emin Velisoy</td>
+										<td>Boru PH 100</td>
+										<td>50% ilkin ödəniş</td>
+										<td>500</td>
+										<td>700</td>
+										<td>01.02.2020</td>
+										<td>01.03.2020</td>
+									</tr>
+									<tr>
+										<td>Ekol</td>
+										<td>KSPMZ2020-001</td>
+										<td>P2020-001</td>
+										<td>141</td>
+										<td>Emin Velisoy</td>
+										<td>Boru PH 100</td>
+										<td>50% ilkin ödəniş</td>
+										<td>500</td>
+										<td>700</td>
+										<td>01.02.2020</td>
+										<td>01.03.2020</td>
+									</tr>
+									<tr>
+										<td>Ekol</td>
+										<td>KSPMZ2020-001</td>
+										<td>P2020-001</td>
+										<td>141</td>
+										<td>Emin Velisoy</td>
+										<td>Boru PH 100</td>
+										<td>50% ilkin ödəniş</td>
+										<td>500</td>
+										<td>700</td>
+										<td>01.02.2020</td>
+										<td>01.03.2020</td>
+									</tr>
+									<tr>
+										<td>Ekol</td>
+										<td>KSPMZ2020-001</td>
+										<td>P2020-001</td>
+										<td>141</td>
+										<td>Emin Velisoy</td>
+										<td>Boru PH 100</td>
+										<td>50% ilkin ödəniş</td>
+										<td>500</td>
+										<td>700</td>
+										<td>01.02.2020</td>
+										<td>01.03.2020</td>
+									</tr>
+									<tr>
+										<td>Ekol</td>
+										<td>KSPMZ2020-001</td>
+										<td>P2020-001</td>
+										<td>141</td>
+										<td>Emin Velisoy</td>
+										<td>Boru PH 100</td>
+										<td>50% ilkin ödəniş</td>
+										<td>500</td>
+										<td>700</td>
+										<td>01.02.2020</td>
+										<td>01.03.2020</td>
+									</tr>
+									<tr>
+										<td>Ekol</td>
+										<td>KSPMZ2020-001</td>
+										<td>P2020-001</td>
+										<td>141</td>
+										<td>Emin Velisoy</td>
+										<td>Boru PH 100</td>
+										<td>50% ilkin ödəniş</td>
+										<td>500</td>
+										<td>700</td>
+										<td>01.02.2020</td>
+										<td>01.03.2020</td>
+									</tr>
+									<tr>
+										<td>Ekol</td>
+										<td>KSPMZ2020-001</td>
+										<td>P2020-001</td>
+										<td>141</td>
+										<td>Emin Velisoy</td>
+										<td>Boru PH 100</td>
+										<td>50% ilkin ödəniş</td>
+										<td>500</td>
+										<td>700</td>
+										<td>01.02.2020</td>
+										<td>01.03.2020</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="col-12 pagination-position">
+							<nav >
+								<ul class="pagination" style="float: right">
+									<li class="page-item">
+										<a class="page-link" href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+											<span class="sr-only">Previous</span>
+										</a>
+									</li>
+									<li class="page-item active"><a class="page-link" href="#">1</a></li>
+									<li class="page-item"><a class="page-link" href="#">2</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item">
+										<a class="page-link" href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+											<span class="sr-only">Next</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END: Table DATA-->
+		</main>
+        <!-- END: Content-->
+		
+        <!-- START: Footer-->
+        <footer class="site-footer">
+            2020 © Gunay
+        </footer>
+        <!-- END: Footer-->
+
+        <!-- START: Back to top-->
+        <a href="#" class="scrollup text-center"> 
+            <i class="icon-arrow-up"></i>
+        </a>
+        <!-- END: Back to top-->
+		
+        <!-- START: Template JS-->
+        <script src="dist/vendors/jquery/jquery-3.3.1.min.js"></script>
+        <script src="dist/vendors/jquery-ui/jquery-ui.min.js"></script>
+        <script src="dist/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>    
+        <script src="dist/vendors/slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- END: Template JS-->
+
+        <!-- START: APP JS-->
+        <script src="dist/js/app.js"></script>
+        <!-- END: APP JS-->
+    </body>
+    <!-- END: Body-->
+</html>

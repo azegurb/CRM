@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- START: Head-->
+    <head>
+        <meta charset="UTF-8">
+        <title>PMZ CRM</title>
+        <link rel="shortcut icon" href="dist/images/favicon.png" />
+        <meta name="viewport" content="width=device-width,initial-scale=1"> 
+
+        <!-- START: Template CSS-->
+        <link rel="stylesheet" href="dist/vendors/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="dist/vendors/simple-line-icons/css/simple-line-icons.css">        
+        <link rel="stylesheet" href="dist/vendors/fontawesome/css/all.min.css">   
+		<link rel="stylesheet" href="dist/vendors/icofont/icofont.min.css"> 
+		<link rel="stylesheet" href="dist/vendors/ionicons/css/ionicons.min.css">
+      	<!-- END Template CSS--> 
+
+        <!-- START: Custom CSS-->
+        <link rel="stylesheet" href="dist/css/main.css">
+        <!-- END: Custom CSS-->
+    </head>
+    <!-- END Head-->
+
+    <!-- START: Body-->    
+    <body id="main-container" class="default contract">
+        <!-- START: Pre Loader-->
+        <div class="se-pre-con">
+            <div class="loader"></div>
+        </div>
+        <!-- END: Pre Loader-->
+
+        <!-- START: Header-->
+        <div id="header-fix" class="fixed-top">
+			<nav class="navbar navbar-expand-lg p-0">
+				<div class="navbar-header h4 mb-0 text-center h-100 collapse-menu-bar">
+					<a href="#" class="sidebarCollapse" id="collapse"><i class="icon-menu"></i></a>
+                </div>
+                <div class="navbar-header  h-100 h4 mb-0 align-self-center logo-bar text-left">  
+					<a href="index.html" class="font-weight-bold ml-1">PMZ Satış</a> 
+                </div>
+				<div class="ml-auto h-100">
+					<ul class="list-unstyled d-flex top-icon h-100">
+						<li>
+							<a href="#" class="nav-link py-0" data-toggle="dropdown" aria-expanded="false">
+								<i class="icon-user"></i>
+                            </a>
+							<div class="dropdown-menu dropdown-menu-right p-0">
+								<a href="" class="dropdown-item text-danger align-self-center d-flex"><span class="icon-logout mr-2 h6  mb-0"></span> Sign Out</a>
+                            </div>
+                        </li>
+					</ul>
+                </div>
+			</nav>
+		</div>
+        <!-- END: Header-->
+
+        <!-- START: Main Menu-->
+        <div class="sidebar">
+			<ul class="sidebar-menu">
+				<li><a href="index.html"><i class="icofont-law-document mr-1"></i>Müqavilə dövriyyəsi</a>
+					<ul>
+						<li><a href="index.html"><i class="icon-briefcase"></i>CRM</a></li>
+                    </ul>
+			    </li>
+		    </ul>        
+        </div>
+        <!-- END: Main Menu-->
+        <!-- START: Main Content-->
+        <main>
+			<div class="container-fluid">
+				<!-- START: Heading-->
+				<div class="row ">
+					<div class="col-12  align-self-center" style="border-bottom: 1px solid #dce2e6;">
+						<div class="sub-header mt-3 py-3 align-self-center d-sm-flex w-100 rounded">
+							<div class="w-sm-100 mr-auto"><h4 class="mb-0">Agent (hüquqi şəxs) müqavilə</h4></div>
+						</div>
+					</div>
+				</div>
+				<!-- END: Heading-->
+                <!-- START: Form Data-->
+				<div class="row">
+					<!-- START: Muqavile-->
+					<div class="col-12 col-lg-6 mt-3">
+						<div class="card p-3">
+							<div class="card-header contract-form-header">                               
+                                <h4 class="card-title">Ümumi məlumat</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="row">                                           
+                                        <div class="col-12">
+                                            <form>
+												<div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Müqavilə nömrəsi</label>
+                                                        <input type="number" class="col-lg-6 form-control" placeholder="20202909-01">
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Şirkət</label>
+													<input type="text" class="col-lg-4 form-control" placeholder="Şirkət adı daxil edin..">													 
+													   <select class="col-lg-2 form-control company-select">
+													        <option selected>MMC</option>
+													        <option>MMC</option>
+															<option>ASC</option>
+													    </select>
+
+                                                </div>
+												<div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Ad/Soyad/Ata adı</label>
+                                                    <textarea class="col-lg-6 form-control" rows="1" placeholder="Məmməd Məmmədov Məmməd oğlu"></textarea>
+                                                </div>
+
+												<div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Ərazi</label>
+                                                    <textarea class="col-lg-6 form-control" rows="1" placeholder="Azərbaycan Respublikası"></textarea>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Direktor</label>
+													<input type="text" class="col-lg-6 form-control" placeholder="Məmməd Məmmədov">												
+                                                </div>
+											    <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Satış meneceri</label>
+                                                      <select class="col-lg-6 form-control company-select">				 
+														    <option selected>Meneceri seçin..</option>
+													        <option>Emin Vəlisoy</option>
+															<option>Fuad Kərimov</option>
+													    </select>
+                                                 </div>
+												 <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Icraçı</label>
+                                                        <input type="text" class="col-lg-6 form-control" placeholder="Gunay Gasimova">
+                                                    </div>
+                                                 <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Yaradılma tarixi</label>
+                                                        <input type="date" class="col-lg-6 form-control" placeholder="">
+                                                 </div>
+												 <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Etibarlıdır</label>
+                                                        <input type="date" class="col-lg-6 form-control" placeholder="">
+                                                 </div>
+
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12 text-center">
+                                                        <button type="submit" class="btn btn-primary">Daxil et</button>   <button type="reset" class="btn btn-outline-warning">Yenilə</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				   <!--END: Muqavile-->
+				   <!-- START: Qeyd-->
+                   <div class="col-12 col-lg-6 mt-3">
+                        <div class="card p-3">
+                            <div class="card-header contract-form-header">                               
+                                <h4 class="card-title">Bank rekvizitləri</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="row">                                           
+                                        <div class="col-12">
+                                            <form>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">VÖEN</label>
+                                                    <input type="number" class="col-lg-6 form-control" placeholder="1701212051...">
+                                                </div>
+                                                   <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">H/h</label>
+                                                        <input type="text" class="col-lg-6 form-control" placeholder="AZ85IBAZ40040019441101191120... ">
+                                                    </div>
+                                                   <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Bank adı</label>
+                                                        <input type="text" class="col-lg-6 form-control" placeholder="/Paşa Bank/ ASC...">
+                                                    </div>
+												    <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Yerləşdiyi yer</label>
+													    <select class=" col-lg-6 form-control company-select">				 
+														    <option selected>Yeri seçin</option>
+													        <option>Azərbaycan</option>
+															<option>Qazaxstan</option>
+															<option>Ukrayna</option>
+													    </select>
+                                                    </div>	
+										         <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label ">Şəhər</label>
+                                                        <select class="col-lg-6 form-control company-select">				 
+														    <option selected>Şəhəri seçin</option>
+													        <option>Bakı</option>
+															<option>Xırdalan</option>
+															<option>Sumqayıt</option>
+													    </select>
+                                                </div>
+                                                    <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">SWIFT</label>
+                                                        <input type="text" class="col-lg-6 form-control" placeholder="BRESAZ22...">
+                                                    </div>
+												    <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Bank kodu</label>
+                                                        <input type="number" class="col-lg-6 form-control" placeholder="505668...">
+                                                    </div>
+												    <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Bank VÖEN</label>
+                                                        <input type="number" class="col-lg-6 form-control" placeholder="9900001901">
+                                                    </div>
+                                                    <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">M/h</label>
+                                                        <input type="number" class="col-lg-6 form-control" placeholder="AZ80NABZ01350100000000014944">
+                                                    </div>
+
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12 text-center">
+                                                        <button type="submit" class="btn btn-primary">Daxil et</button>   <button type="submit" class="btn btn-outline-warning">Yenilə</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				    <!-- END: Qeyd-->
+				<!-- END: Card DATA-->
+                </div> <!---->
+			</div>
+         </main>
+        <!-- END: Content-->
+
+
+
+        <!-- START: Footer-->
+        <footer class="site-footer">
+            2020 © PICK
+        </footer>
+        <!-- END: Footer-->
+
+
+        <!-- START: Back to top-->
+        <a href="#" class="scrollup text-center"> 
+            <i class="icon-arrow-up"></i>
+        </a>
+        <!-- END: Back to top-->
+
+        <!-- START: Template JS-->
+        <script src="dist/vendors/jquery/jquery-3.3.1.min.js"></script>
+        <script src="dist/vendors/jquery-ui/jquery-ui.min.js"></script>
+        <script src="dist/vendors/moment/moment.js"></script>
+        <script src="dist/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>    
+        <script src="dist/vendors/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- END: Template JS-->
+
+        <!-- START: APP JS-->
+        <script src="dist/js/app.js"></script>
+<!--		 <script src="app.js"></script>-->
+        <!-- END: APP JS-->
+		
+		    <script src="app.js"></script>
+    </body>
+    <!-- END: Body-->
+</html>

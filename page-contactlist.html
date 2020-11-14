@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- START: Head-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Pick Admin</title>
+        <link rel="shortcut icon" href="dist/images/favicon.png" />
+        <meta name="viewport" content="width=device-width,initial-scale=1"> 
+
+        <!-- START: Template CSS-->
+        <link rel="stylesheet" href="dist/vendors/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="dist/vendors/simple-line-icons/css/simple-line-icons.css">        
+        <link rel="stylesheet" href="dist/vendors/fontawesome/css/all.min.css">   
+		<link rel="stylesheet" href="dist/vendors/icofont/icofont.min.css"> 
+		<link rel="stylesheet" href="dist/vendors/ionicons/css/ionicons.min.css">
+      	<!-- END Template CSS--> 
+
+        <!-- START: Custom CSS-->
+		<link rel="stylesheet" href="dist/css/contact-page.css">
+		<link rel="stylesheet" href="dist/css/custom.css">
+	    <!-- END: Custom CSS-->
+		
+    </head>
+    <!-- END Head-->
+
+    <!-- START: Body-->    
+    <body>
+        <!-- START: Pre Loader-->
+        <div class="se-pre-con">
+            <div class="loader"></div>
+        </div>
+        <!-- END: Pre Loader-->
+
+        <!-- START: Header-->
+        <div id="header-fix" class="fixed-top">
+			<nav class="navbar navbar-expand-lg p-0">
+				<div class="navbar-header h4 mb-0 text-center h-100 collapse-menu-bar">
+					<a href="#" class="sidebarCollapse" id="collapse"><i class="icon-menu"></i></a>
+                </div>
+                <div class="navbar-header  h-100 h4 mb-0 align-self-center logo-bar text-left">  
+					<a href="index.html" class="font-weight-bold ml-1">PMZ Satış</a> 
+                </div>
+				<div class="ml-auto h-100">
+					<ul class="list-unstyled d-flex top-icon h-100">
+						<li>
+							<a href="#" class="nav-link py-0" data-toggle="dropdown" aria-expanded="false">
+								<i class="icon-user"></i>
+                            </a>
+							<div class="dropdown-menu dropdown-menu-right p-0">
+								<a href="" class="dropdown-item text-danger align-self-center d-flex"><span class="icon-logout mr-2 h6  mb-0"></span> Sign Out</a>
+                            </div>
+                        </li>
+					</ul>
+                </div>
+			</nav>
+		</div>
+        <!-- END: Header-->
+         <!-- START: Main Menu-->
+        <div class="sidebar">
+			<ul class="sidebar-menu">
+				<li><a href="index.html"><i class="icofont-law-document mr-1"></i>Müqavilə dövriyyəsi</a>
+					<ul>
+						<li><a href="index.html"><i class="icon-briefcase"></i>CRM</a></li>
+                    </ul>
+			    </li>
+		    </ul>        
+        </div> 
+        <!-- END: Main Menu-->
+
+        <!-- START: Main Content-->
+        <main>
+            <div class="container-fluid">
+   			    <!-- START: Topbar Menu-->
+                <div class="row ">
+                    <div class="col-12">
+						<div class="theme-background p-2 mt-4 menu-header">
+							<ul class="nav nav-pills flex-column flex-sm-row">
+								<li>
+									<a class="nav-link py-2 px-3 px-lg-4" href="index.html">Müqavilə</a>
+								</li>
+								<li>
+									<a class="nav-link py-2 px-3 px-lg-4" href="page-annex.html"> Əlavə</a>
+								</li>
+								<li>
+									<a class="nav-link py-2 px-3 px-lg-4 active" href="page-contactlist.html"> Kontakt</a>
+								</li>
+								<li>
+									<a class="nav-link py-2 px-3 px-lg-4" href="page-bank.html"> 
+									Bank</a>
+								</li>
+							</ul>
+                        </div>
+					</div>
+				</div>
+			    <!-- END: Topbar Menu-->
+
+                <!-- START: Form Data-->
+                <div class="row row-eq-height">
+					<div class="col-12 col-lg-2 mt-3 todo-menu-bar flip-menu pr-lg-0">
+<!--						<a href="#" class="d-inline-block d-lg-none mt-1 flip-menu-close"><i class="icon-close"></i></a>-->
+<!--						<div class="card-header d-flex justify-content-between align-items-center">-->
+<!--							<a href="#"  class="btn-contract py-2 px-2 rounded ml-auto text-white w-100 text-center" data-toggle="modal" data-target="#newcontact">-->
+<!--								<span class="d-none d-xl-inline-block">Yeni kontakt əlavə et</span>-->
+<!--							</a>-->
+							<button type="button" class="btn dropdown-toggle btn-contract rounded" data-toggle="modal" data-target="#newcontact">
+								Yeni kontakt əlavə et
+							</button>
+							<!-- Add Contact -->
+							<div class="modal fade" id="newcontact">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title">
+												<i class="icon-pencil"></i>Daxil et
+											</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+										<form class="add-contact-form">
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="contact-name">
+															<label for="contact-name" class="col-form-label">Şirkət</label>
+															<input type="text" id="contact-name" class="form-control" required="" >
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="contact-email">
+															<label for="contact-email" class="col-form-label">Ünvan</label>
+															<textarea class="form-control" rows="1" ></textarea>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="contact-occupation">
+															<label for="contact-occupation" class="col-form-label">Əlaqəli şəxs</label>
+															<input type="text" id="contact-occupation" class="form-control" placeholder="Ad və soyadı daxil edin..">
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="contact-phone text-break">
+															<label for="contact-phone" class="col-form-label">Telefon</label>
+															<input type="text" id="contact-phone" class="form-control">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="contact-phone text-break">
+															<label for="contact-phone" class="col-form-label">Vəzifəsi</label>
+															<input type="text" id="" class="form-control">
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="contact-phone text-break">
+															<label for="contact-phone" class="col-form-label">Şəxsi e-poçtu</label>
+															<input type="email" id="" class="form-control">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="contact-phone text-break">
+															<label for="contact-phone" class="col-form-label">İş e-poçtu</label>
+															<input type="email" id="" class="form-control">
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="contact-phone text-break">
+															<label for="contact-phone" class="col-form-label">WEB sayt</label>
+															<input type="text" id="" class="form-control">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="submit" class="btn btn-primary add-todo">Daxil et</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<!-- Edit Contact -->
+							<div class="modal fade" id="editcontact">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title">
+												<i class="icon-pencil"></i> Yenilə
+											</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+										<form class="edit-contact-form">
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="contact-name">
+															<label for="contact-name" class="col-form-label">Şirkət</label>
+															<input type="text" id="contact-name" class="form-control" required="" >
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="contact-email">
+															<label for="contact-email" class="col-form-label">Ünvan</label>
+															<textarea class="form-control" rows="1" ></textarea>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="contact-occupation">
+															<label for="contact-occupation" class="col-form-label">Əlaqəli şəxs</label>
+															<input type="text" id="contact-occupation" class="form-control" placeholder="Ad və soyadı daxil edin..">
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="contact-phone">
+															<label for="contact-phone" class="col-form-label">Telefon</label>
+															<input type="text" id="contact-phone" class="form-control">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="contact-phone">
+															<label for="contact-phone" class="col-form-label">Vəzifəsi</label>
+															<input type="text" id="" class="form-control" /></div>
+													</div>
+													<div class="col-md-6">
+														<div class="contact-phone">
+															<label for="contact-phone" class="col-form-label">Şəxsi e-poçtu</label>
+															<input type="email" id="" class="form-control"> </div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="contact-phone">
+															<label for="contact-phone" class="col-form-label">İş e-poçtu</label>
+															<input type="email" id="" class="form-control">
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="contact-phone">
+															<label for="contact-phone" class="col-form-label">WEB sayt</label>
+															<input type="text" id="" class="form-control"></div>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<input type="hidden"  id="edit-date">
+												<button type="submit" class="btn btn-primary add-todo">Update</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+<!--						</div>-->
+					</div>
+				</div>
+				<div class="col-12 col-lg-12 mt-3 pl-lg-0" style="padding-right: 0px">
+                        <div class="card border h-100 contact-list-section">
+                            <div class="card-header border-bottom p-1 d-flex">
+                                <input type="text" class="form-control border-0 p-2 w-100 h-100 contact-search" placeholder="Search ...">
+                                <a href="#" class="list-style search-bar-menu border-0 active"><i class="icon-list"></i></a>
+                                <a href="#" class="grid-style search-bar-menu"><i class="icon-grid"></i></a>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="contacts list">
+                                    <div class="contact family-contact"> 
+                                        <div class="contact-content">
+                                            <div class="contact-profile text-break">
+												<img src="dist/images/3304215.jpg" alt="avatar" class="user-image img-fluid">
+												<div class="contact-info">
+													<p class="contact-name mb-0">Ekoldddddddddddddddddddddddddddddddd</p>
+                                                </div>
+                                            </div>
+										    <div class="contact-location">
+                                                <p class="mb-0 small">Ünvan: </p>
+                                                <p class="user-location">Washington</p>
+                                            </div>
+                                            <div class="contact-profile text-break">
+												<div class="contact-info">
+                                                    <p class="contact-name mb-0">Anar Mammadov</p>
+                                                    <p class="contact-position mb-0 small font-weight-bold text-muted">Chief Executive Officer</p>
+                                                </div>
+                                            </div>
+                                            <div class="contact-phone">
+                                                <p class="mb-0 small">Telefon: </p>
+                                                <p class="user-phone telClass">+1 (020) 123-4567</p>
+                                            </div>
+                                            <div class="contact-email">
+                                                <p class="mb-0 small">Şəxsi e-poçtu: </p>
+                                                <p class="user-email">kf@mail.com</p>
+                                            </div>
+										    <div class="contact-email">
+                                                <p class="mb-0 small">İş e-poçtu: </p>
+                                                <p class="user-email">kf@mail.com</p>
+                                            </div>
+										    <div class="contact-email">
+                                                <p class="mb-0 small">WEB Sayt: </p>
+                                                <p class="user-email">kf@mail.com</p>
+                                            </div>
+                                            <div class="line-h-1 h5">
+                                                <a class="text-success edit-contact" href="#" data-toggle="modal" data-target="#edittask"><i class="icon-pencil"></i></a>
+                                                <a class="text-danger delete-contact" href="#"><i class="icon-trash"></i></a>                                 
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="contact family-contact"> 
+                                        <div class="contact-content">
+                                            <div class="contact-profile text-break">
+												<img src="dist/images/contact-1.jpg" alt="avatar" class="user-image img-fluid">
+                                                <div class="contact-info">
+                                                    <p class="contact-name mb-0">Ekol</p>
+                                                </div>
+                                            </div>
+										    <div class="contact-location">
+                                                <p class="mb-0 small">Ünvan: </p>
+                                                <p class="user-location">Washington</p>
+                                            </div>
+                                            <div class="contact-profile text-break">
+												<div class="contact-info">
+                                                    <p class="contact-name mb-0">Anar Mammadov</p>
+                                                    <p class="contact-position mb-0 small font-weight-bold text-muted">Chief Executive Officer</p>
+                                                </div>
+                                            </div>
+                                            <div class="contact-phone">
+                                                <p class="mb-0 small">Telefon: </p>
+                                                <p class="user-phone telClass">+1 (020) 123-4567</p>
+                                            </div>
+                                            <div class="contact-email">
+                                                <p class="mb-0 small">Şəxsi e-poçta: </p>
+                                                <p class="user-email">kf@mail.com</p>
+                                            </div>
+									        <div class="contact-email">
+                                                <p class="mb-0 small">İş e-poçtu: </p>
+                                                <p class="user-email">kf@mail.com</p>
+                                            </div>
+										    <div class="contact-email">
+                                                <p class="mb-0 small">WEB Sayt: </p>
+                                                <p class="user-email">kf@mail.com</p>
+                                            </div>
+                                            <div class="line-h-1 h5">
+                                                <a class="text-success edit-contact" href="#" data-toggle="modal" data-target="#edittask"><i class="icon-pencil"></i></a>
+                                                <a class="text-danger delete-contact" href="#"><i class="icon-trash"></i></a>                                 
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="contact family-contact"> 
+                                        <div class="contact-content">
+                                            <div class="contact-profile text-break">
+												<img src="dist/images/contact-1.jpg" alt="avatar" class="user-image img-fluid">
+                                                <div class="contact-info">
+                                                    <p class="contact-name mb-0">Ekol</p>
+                                                </div>
+                                            </div>
+										    <div class="contact-location">
+                                                <p class="mb-0 small">Ünvan: </p>
+                                                <p class="user-location">Washington</p>
+                                            </div>
+                                            <div class="contact-profile text-break">
+												<div class="contact-info">
+                                                    <p class="contact-name mb-0">Anar Mammadov</p>
+                                                    <p class="contact-position mb-0 small font-weight-bold text-muted">Chief Executive Officer</p>
+                                                </div>
+                                            </div>
+                                            <div class="contact-phone">
+                                                <p class="mb-0 small">Telefon: </p>
+                                                <p class="user-phone telClass">+1 (020) 123-4567</p>
+                                            </div>
+                                            <div class="contact-email">
+                                                <p class="mb-0 small">Şəxsi e-poçta: </p>
+                                                <p class="user-email">kf@mail.com</p>
+                                            </div>
+									        <div class="contact-email">
+                                                <p class="mb-0 small">İş e-poçtu: </p>
+                                                <p class="user-email">kf@mail.com</p>
+                                            </div>
+										    <div class="contact-email">
+                                                <p class="mb-0 small">WEB Sayt: </p>
+                                                <p class="user-email">kf@mail.com</p>
+                                            </div>
+                                            <div class="line-h-1 h5">
+                                                <a class="text-success edit-contact" href="#" data-toggle="modal" data-target="#edittask"><i class="icon-pencil"></i></a>
+                                                <a class="text-danger delete-contact" href="#"><i class="icon-trash"></i></a>                                 
+                                            </div>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+			<!-- END: Card DATA-->
+		</main>
+        <!-- END: Content-->
+
+
+        <!-- START: Footer-->
+        <footer class="site-footer">
+            2020 © PICK
+        </footer>
+        <!-- END: Footer-->
+
+
+        <!-- START: Back to top-->
+        <a href="#" class="scrollup text-center"> 
+            <i class="icon-arrow-up"></i>
+        </a>
+        <!-- END: Back to top-->
+
+        <!-- START: Template JS-->
+        <script src="dist/vendors/jquery/jquery-3.3.1.min.js"></script>
+        <script src="dist/vendors/jquery-ui/jquery-ui.min.js"></script>
+        <script src="dist/vendors/moment/moment.js"></script>
+        <script src="dist/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>    
+        <script src="dist/vendors/slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- END: Template JS-->       
+
+        <!-- START: APP JS-->
+        <script src="dist/js/app.js"></script>
+        <!-- END: APP JS-->
+
+        <!-- START: Page JS-->
+        <script src="dist/js/app.contactlist.js"></script>
+        <!-- END: Page JS-->
+    </body>
+    <!-- END: Body-->
+</html>
